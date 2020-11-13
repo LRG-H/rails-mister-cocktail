@@ -10,6 +10,8 @@
       <% @cocktails.each do |cocktail| %>
         <tr>
           <td><%= cocktail.name %></td>
+          <%= cl_image_tag("https://res.cloudinary.com/bukevalos/image/upload/v1605268360/p9bgpokv5azagpg7avuq.jpg",
+      width: 400, height: 300, crop: :fill) %>
           <td><%= link_to 'Show', cocktail %></td>
           <td><%= link_to 'Delete', cocktail_path(cocktail), method: :delete %></td>
         </tr>
